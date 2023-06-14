@@ -1,0 +1,48 @@
+/*ESTILO DE LAS VISTAS*/
+body{
+    background-image: url('imagenes/logotipo.png');
+    background-repeat: no-repeat; 
+    background-position: left bottom;
+}
+
+/*-------------- Vista de las reservas -----------*/
+
+table{
+    border: 2px solid blue;
+    border-collapse: collapse;
+    margin-left: 450px;
+    margin-top: 50px;
+    width: 550px;
+    height: 300px;
+}
+th,td{
+    border: 2px solid;
+    padding: 5px;
+}
+th{
+    background-color: rgb(170, 212, 252);
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+
+/*  ESTIULO DEL NAV  */
+ol{
+    display: inline;
+    /*width: 70px;*/
+}
+
+ol a{
+    text-decoration: none;
+}
+
+li{
+    margin-top: 20px;
+    display: inline;
+    padding: 10px;
+    background-color: rgb(170, 212, 252);
+    border-right: gray;
+    margin-right: 50px;
+    cursor: pointer;
+}
