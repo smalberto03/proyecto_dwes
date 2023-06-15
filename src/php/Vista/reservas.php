@@ -1,14 +1,15 @@
 <?php 
-    require_once('../Controlador/C_reservas.php'); 
+    require_once('../Controlador/C_reservas.php'); //Requerimos al controlador
 
     $table = array();
 
+    //instaciamos la clase y realizamos el metodo
     $objeto_controlador = new C_reservas();
     $table = $objeto_controlador->insertar_td();
 
     session_start();
 
-    if(!isset($_SESSION['sesion1']))
+    if(!isset($_SESSION['sesion1'])) //Se comprueba que este la sesion iniciada para que no se puede llegar mediante url si no se ha iniciado sesion 
     {
         header('Location: Vista_login.php');
     }
@@ -39,6 +40,7 @@
             <th>Viernes</th>
         </tr>
         <tr>
+            <!-- EN CADA CELDA MUESTRO LA POSICION DEL ARRAY QUE SE ENCIUENTRA EN ESA POSICION -->
             <th>1ª</th>
             <td><?php echo $table[1][2]; ?></td>
             <td><?php echo $table[1][3]; ?></td>

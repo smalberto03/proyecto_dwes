@@ -6,6 +6,10 @@
 
     class C_exportar_excel {
 
+        /**
+         * Leemos el excel y duardamos los campos que vamos a insertar en variables
+         * Esta variable se mandan cuando realizamos el metodo de insertar en la base de datos del modelo 
+         */
         public function leer_excel()
         {
         

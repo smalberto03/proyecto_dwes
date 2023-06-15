@@ -31,7 +31,7 @@
             // se introduciran por teclado y así evitamos inyeccion sql y es más seguro
 
             //$this->conectar $conectar          
-            $prepare = $this->conectar->prepare("SELECT * from user WHERE usuario = ? AND pass = ?"); //En la consulta coasundo usamos prepare en campos que van a aprecer de un formulario usamos '?' luego le decimos que tipo de dato es 
+            $prepare = $this->conectar->prepare("SELECT * from usuario WHERE usuario = ? AND pass = ?"); //En la consulta coasundo usamos prepare en campos que van a aprecer de un formulario usamos '?' luego le decimos que tipo de dato es 
             
 
             $prepare->bind_param('ss', $parametro1, $parametro2); // Con bind_param() debemos decirle que tipo de dato son los '?' de la consulta en este caso dos strings y denominamos a los campos
@@ -39,7 +39,7 @@
             //echo $parametro1;
 
             $parametro1 = $usuario;
-            $parametro2 = $pass; //sha1($pass)
+            $parametro2 = sha1($pass); //$pass
 
             $prepare->execute(); //Esto termina el proceso de prepare
 
